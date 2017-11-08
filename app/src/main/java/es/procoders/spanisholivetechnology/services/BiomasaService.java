@@ -27,12 +27,10 @@ public class BiomasaService {
      *
      * @param datosBio responde como parametro al objeto BiomasaBean
      *
-     * @return devuelve el valor por defecto de retVal si no se cumple ninguna de las condiciones
+     * @return devuelve el valor de retVal tras comprobar las condiciones
      */
 
-    public Boolean isReady(BiomasaBean datosBio) {
-
-
+    public Boolean BiomasaReady(BiomasaBean datosBio) {
 
         Boolean retVal = false;
 
@@ -53,3 +51,4 @@ public class BiomasaService {
 
 //    public BussinessRule getRule ()
 }
+

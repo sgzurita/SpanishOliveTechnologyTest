@@ -3,10 +3,16 @@ package es.procoders.spanisholivetechnology.questions;
 import android.text.Layout;
 
 /**
- * Created by Apps on 07/11/2017.
+ * @author Procoders
+ * @since API 21
+ * @version 1.0
  */
 
 public class Options {
+
+    /**
+     * Esta clase trabaja sobre el FragmentMain
+     */
 
     private String tituloOpcion;
     private boolean required;

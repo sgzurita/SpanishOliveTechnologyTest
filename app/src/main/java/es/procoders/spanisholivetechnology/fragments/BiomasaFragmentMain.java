@@ -77,7 +77,7 @@ public class BiomasaFragmentMain extends android.support.v4.app.Fragment impleme
         floating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(services.isReady(controller.getBiomasa())) {
+                if(services.BiomasaReady(controller.getBiomasa())) {
                     Intent intent = new Intent(view.getContext(), ResultActivity.class);
                     intent.putExtra("datos", controller.getBiomasa());
                     startActivity(intent);

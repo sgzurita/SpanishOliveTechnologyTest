@@ -57,41 +57,18 @@ public class ListViewAdapter extends ArrayAdapter<Options> {
 
 
 
-   // @Override
- /*   public View getView(int i, View view, ViewGroup viewGroup) {
-        super.getView(i,view,viewGroup);
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) viewGroup.getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.list_simple_item, viewGroup, false);
-        }
 
-        TextView desc = (TextView) view.findViewById(R.id.idDescription);
-        TextView name = (TextView) view.findViewById(R.id.mainListView);
-        ImageView image = view.findViewById(R.id.imageListView);
-
-        Options nameS = lista.get(i);
-        if (nameS.isRequired()){
-            image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
-        }
-        if (lista.get(i).getDescription() != null){
-            desc.setText(lista.get(i).getDescription());
-        }
-        name.setText(nameS.getTituloOpcion());
-        return view;
-    }*/
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-        // Get the data item for this position
+
         Options user = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
+        view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
 
-            view = LayoutInflater.from(getContext()).inflate(R.layout.list_simple_item, parent, false);
 
-        // Lookup view for data population
         TextView desc = (TextView) view.findViewById(R.id.idDescription);
         TextView name = (TextView) view.findViewById(R.id.mainListView);
         ImageView image = view.findViewById(R.id.imageListView);
+
         if (user.isRequired()){
 
             image.setImageDrawable(view.getResources().getDrawable(R.drawable.ic_info));
@@ -104,12 +81,7 @@ public class ListViewAdapter extends ArrayAdapter<Options> {
             desc.setText("");
         }
         name.setText(user.getTituloOpcion());
-     //   TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-       // TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
-        // Populate the data into the template view using the data object
-       // tvName.setText(user.name);
-        //tvHome.setText(user.hometown);
-        // Return the completed view to render on screen
+
         return view;
     }
 }

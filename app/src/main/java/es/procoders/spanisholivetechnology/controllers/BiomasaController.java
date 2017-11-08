@@ -26,6 +26,9 @@ public class BiomasaController {
      * @param activity recibe la actividad que esta en curso en el momento de la llamada
      *                 para trabajar sobre ella
      * @param fmanager controla el proceso del FragmentManager
+     *
+     *
+     *
      */
 
 
